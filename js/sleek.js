@@ -34,14 +34,14 @@ function DownloadingFile( fileName ) {
 	downloadedFiles++;
 	refreshProgress();
 
-	setStatus("Downloading files...");
+	setStatus("Загрузка файлов...");
 }
 
 function SetStatusChanged( status ) {
-	if (status.indexOf("Getting Addon #") != -1) {
+	if (status.indexOf("Загрузка Аддона #") != -1) {
 		downloadedFiles++;
 		refreshProgress();
-	}else if (status == "Sending client info...") {
+	}else if (status == "Отправка сведений о клиенте...") {
 		setProgress(100);
 	}
 
